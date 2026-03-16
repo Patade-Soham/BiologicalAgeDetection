@@ -1,0 +1,15 @@
+.git
+.gitignore
+.venv
+venv
+__pycache__
+.pytest_cache
+pytest-cache-files-*
+*.pyc
+*.pyo
+*.pyd
+*.db
+uploads
+test_uploads
+external_models
+project idea

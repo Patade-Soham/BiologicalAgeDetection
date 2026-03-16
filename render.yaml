@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: biological-age-detection-api
+    env: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_NAME
+        value: LIFESPAN AI
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:///./data/lifespan_ai.db
+      - key: UPLOAD_ROOT
+        value: ./uploads
+    disk:
+      name: app-data
+      mountPath: /app/data
+      sizeGB: 1
